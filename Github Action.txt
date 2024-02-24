@@ -1,0 +1,50 @@
+Plateforme pour automatiser les workflow
+
+Quand un évènement se declenche dans un repository un peut exécuter une 
+
+Github Action:
+--------------
+1 -Listen to event (push, pull request,Issue created
+2- Trigger workflow (cicd, 
+
+workflow : une combinaison des actions
+
+Adventages
+---------
+use the same tool
+setup pipeline is easy
+
+
+workflow
+--------
+get executed on github server
+
+on job will runn on a single server at a time
+
+by default jobs run in parallel
+
+to add depedency:
+----------------
+ publish-job:
+    needs: build-job
+
+server can run on : Ubuntu, windows, macOS
+-------------------------------------------
+
+runs-on: ubuntu-latest
+
+or 
+runs-on: ${{matrix.os}}
+strategy:
+  matrix:
+   os:[ubuntu-latest, windows-latest, macOS-latest]
+
+
+
+
+
+
+
+
+
+
